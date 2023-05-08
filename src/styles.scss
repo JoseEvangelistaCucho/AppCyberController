@@ -1,0 +1,143 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+//$theme-colors: (primary: #333333);
+
+input[type="checkbox"] {
+    background: #990000;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: #00947A;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #00947A;
+}
+
+.mat-form-field-infix {
+    color: #00947A;
+}
+
+.mat-option-text {
+    color: #00947A;
+    }
+    
+    .mat-form-field-infix {
+    border-top-width: 5px;
+    }
+    
+    .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+    color: #00947A;
+    }
+    
+    .mat-select-min-line .ng-tns-c93-1 .ng-star-inserted {
+    color: #00947A !important;
+    }
+    
+    .mat-checkbox-frame {
+    border: #00947A solid 2px !important;
+    }
+    
+    @font-face {
+    font-family: Mont-Light;
+    src: url(/assets/fonts/Mont-Light.otf) format('truetype');
+    }
+    
+    @font-face {
+    font-family: Mont-Bold;
+    src: url(/assets/fonts/Mont-Bold.otf) format('truetype');
+    }
+    
+    @font-face {
+    font-family: Mont-SemiBold;
+    src: url(/assets/fonts/Mont-SemiBold.otf) format('truetype');
+    }
+    
+    html {
+    min-height: 100%;
+    position: relative;
+    }
+    
+    body {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: Mont-Light !important;
+    }
+    
+    .required::after {
+    font-weight: negrita;
+    color: red;
+    content: " *";
+    }
+    
+    .col-right {
+    text-align: right;
+    }
+    
+    .centrar-componente {
+    text-align: center;
+    float: none;
+    }
+    
+    .titulo {
+    font-size: 32px;
+    color: #347cda;
+    font-family: Mont-Bold !important;
+    }
+    
+    .idremesa {
+    font-size: 28px;
+    font-family: Mont-SemiBold !important;
+    }
+    
+    .secuencial {
+    font-size: 20px;
+    font-family: Mont-Light !important;
+    }
+    
+    .sub-titulo {
+    color: #ff9e1b;
+    font-size: 16px;
+    font-family: Mont-Light !important;
+    }
+    
+    .sub-titulo-pregunta {
+    color: #3E404E;
+    font-size: 16px;
+    font-family: Mont-SemiBold !important;
+    }
+    
+    .boton-oscuro {
+    text-align: left;
+    background: #00947A;
+    color: #fff;
+    border-color: #00947A;
+    font-family: Mont-SemiBold;
+    font-size: 16px;
+    }
+    
+    .mat-datepicker-toggle-active {
+    color: #00947A;
+    }
+    
+    .mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element,
+    .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+    background: #00947a;
+    }
+    
+    .boton-oscuro:hover {
+    background: #ee5a5a;
+    }
+    
+    .boton-claro {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    color: #00947A;
+    background: #FFF;
+    font-family: Mont-SemiBold;
+    font-size : 16px
+ }
+    .icono-claro {
+    color: rgb(176, 204, 247);
+    }

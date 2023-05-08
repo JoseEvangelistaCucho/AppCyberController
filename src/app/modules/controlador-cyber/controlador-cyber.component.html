@@ -1,0 +1,68 @@
+<div class="panel-center">
+    <div class="container">
+        <div class="col-12">
+            <div class="header">
+                <div class="titulo titulo-reg">Controlador</div>
+                <mat-grid-list class="header-reg" cols="4" rowHeight="100px">
+                    <mat-grid-tile>Ordenador</mat-grid-tile>
+                    <mat-grid-tile>Inicio</mat-grid-tile>
+                    <mat-grid-tile>Termina</mat-grid-tile>
+                    <mat-grid-tile>Contador</mat-grid-tile>
+                </mat-grid-list>
+            </div>
+            <div class="panel-der-reg">
+                <div *ngIf="showClock">
+                    <mat-form-field>
+                      <input matTimepicker #t1="matTimepicker" placeholder="Selecciona la hora" [(ngModel)]="selectedTime">
+                      <mat-icon matSuffix>access_time</mat-icon>
+                      <mat-timepicker #picker></mat-timepicker>
+                    </mat-form-field>
+                    <button (click)="captureTime()" mat-raised-button color="primary">Capturar</button>
+                  </div>
+                <mat-grid-list cols="4" rowHeight="100px">
+                    <mat-grid-tile class="drow-container">
+                        <div>
+                            <button (click)="onInitialTime(controllerDateOne)"  class="button-panel-reg" mat-button>INICIAR PC 1</button>
+                        </div>
+                        <div *ngIf="showInput">
+                            <input type="text" [(ngModel)]="controllerDateOne.amount" class="input-field">
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile><p>{{ controllerDateOne.initial }}</p></mat-grid-tile>
+                    <mat-grid-tile ></mat-grid-tile>
+                    <mat-grid-tile ><p>{{ controllerDateOne.state }}</p></mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="4" rowHeight="100px">
+                    <mat-grid-tile>
+                        <div>
+                            <button (click)="onInitialTime(controllerDateTwo)" class="button-panel-reg" mat-button>INICIAR PC 2</button>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile><p>{{ controllerDateTwo.initial }}</p></mat-grid-tile>
+                    <mat-grid-tile>Termina</mat-grid-tile>
+                    <mat-grid-tile>Contador</mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="4" rowHeight="100px">
+                    <mat-grid-tile>
+                        <div>
+                            <button (click)="onInitialTime(controllerDateThree)" (click)="onInitialTime(controllerDateTwo)" class="button-panel-reg" mat-button>INICIAR  PC 3</button>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile><p>{{ controllerDateThree.initial }}</p></mat-grid-tile>
+                    <mat-grid-tile>Termina</mat-grid-tile>
+                    <mat-grid-tile>Contador</mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="4" rowHeight="100px">
+                    <mat-grid-tile>
+                        <div>
+                            <button (click)="onInitialTime(controllerDateFour)" class="button-panel-reg" mat-button>INICIAR  PC 4</button>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile ><p>{{ controllerDateFour.initial }}</p></mat-grid-tile>
+                    <mat-grid-tile>Termina</mat-grid-tile>
+                    <mat-grid-tile>Contador</mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+    </div>
+</div>

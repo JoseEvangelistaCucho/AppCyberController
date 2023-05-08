@@ -1,0 +1,64 @@
+<div class ="panel-center">
+    <div class = "container">
+        <div class="row">
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 centrar-componente"></div>
+        <div  class="col-xl-10 col-lg-10 col-md-12 col-sm-12 centrar-componente">
+            <div class="btn-navbar collapsed">
+                <div class="row"></div>
+                    <section class="col-xl-4 col-lg-4 col-md-12 col-sm-12 " style="text-align: left;padding-left: 36px;">
+                        <img src="{{host}}/assets/img/logo.svg" routerLink="/login" class="img-logo" alt="Inicio"  >
+                    </section>
+                </div>
+            </div>
+            <div class="container panel-iniciar-sesion" >
+                <div class="row">
+                    <div class="col-12">
+                        <p class="titulo">INICIAR SESION</p>
+                        <p class="sub/titulo">Controlador Cyber.</p>
+                    </div>
+                    <div class="col-12 panel-input">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 etiqueta" style="text-align: left;" >
+                                    <b>Usuario</b>
+                                </div>
+                                <div class="col-xl-6 col-lg-l0 col-md-12 input">
+                                    <mat-form-field appearance="outline" class="style-session-form">
+                                        <input [(ngModel)]="userRequest.user"   matInput type="text" placeholder="Ingresar usuario">
+                                        <mat-icon class="icono-claro" matPrefix>person</mat-icon>
+                                    </mat-form-field>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-12 panel-input"  style="margin-top: 8px;">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-l col-md-12 etiqueta"  style="text-align: left;">
+                                    <b>Contrasena</b>
+                                </div>
+                                <div class="col-xl-6  col-lg-l col-md-12 input">
+                                    <mat-form-field appearance="outline"  class="style-session-form">
+                                        <input [(ngModel)]="userRequest.password"  matInput [type]="hide ? 'password' : 'text'"  placeholder="Ingresar Contrasena">
+                                            <button mat-icon-button [attr.aria-label]="hide ? 'Hide password' : 'Show password'" (click)="hide = !hide" matPrefix>
+                                                <mat-icon class="icono-claro" >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                            </button>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="col-10 centrar-componente">
+                        <button (click)="onValidateUser()" mat-stroked-button class="boton-oscuro boton" style="text-align: left;width: 100%;padding-top: 7px;padding-bottom: 7px;border-radius: 8px;">
+                            INGRESAR
+                            <mat-icon style="float: right;margin: 4px 0px;" aria-hidden="false" class="icon-right" aria-label="Example home icon">login</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <div class="col-2 centrar-componente" ></div>
+        </div>
+    </div>
+</div>
+<div  class="panel-der img-panel">
+</div>
